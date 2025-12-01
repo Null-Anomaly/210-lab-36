@@ -1,7 +1,7 @@
 /*COMSC 210 | Lab 36 | Lawrence Bryant
 IDE used: VSC*/
 #include <iostream>
-#include "IntBinaryTree.h"
+#include "stringBinaryTree.h"
 using namespace std;
 
 int main() {
