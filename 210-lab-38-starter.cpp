@@ -6,14 +6,15 @@ IDE used: VSC*/
 #include <iostream>
 using namespace std;
 
-int main() {
+int main() 
+{
     
     stringBinaryTree tree;
     
     ifstream fin ("codes.txt");
-    fin.open("codes.txt");
 
     string liner;
+    fin.open("codes.txt");
     while(fin.good())
     {
         getline(fin, liner);
@@ -21,11 +22,21 @@ int main() {
         cout << liner << "\n";
     }
     fin.close();
+
+   /*
+    fin.open("codes.txt");
+    for(int i = 0; i < 100; i++)
+    {
+        getline(fin, liner);
+        tree.insertNode(liner);
+        cout << liner << "\n";
+    }*/
     
     int x = -1;
 
     while(x != 0)
     {
+        //Menuing.
         cout << "Welcome to the menu!\n Please select an option:\n";
         cout << "1. Insert a string into the tree\n";
         cout << "2. Delete a string from the tree\n";
@@ -34,6 +45,7 @@ int main() {
         cout << "0 to exit\n";
         cin >> x;
 
+        //Inserts a value
         if(x == 1)
         {
             string temp;
@@ -41,6 +53,7 @@ int main() {
             cin >> temp;
             tree.insertNode(temp);
         }
+        //Deletes a value
         if(x == 2)
         {
             string temp;
@@ -48,6 +61,7 @@ int main() {
             cin >> temp;
             tree.remove(temp);
         }
+        //Searches the value in the tree
         if( x == 3)
         {
             string temp;
@@ -62,12 +76,14 @@ int main() {
                 cout << "The string " << temp << " was not found in the tree.\n";
             }
         }
+        //displays values of the tree
         if(x == 4)
         {
             tree.displayInOrder();
         }
 
     }
+    fin.close();
 
     return 0;
 }
