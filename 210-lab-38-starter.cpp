@@ -1,6 +1,5 @@
 /*COMSC 210 | Lab 36 | Lawrence Bryant
 IDE used: VSC*/
-#include <iostream>
 #include "stringBinaryTree.h"
 #include <string>
 #include <fstream>
@@ -10,13 +9,16 @@ using namespace std;
 int main() {
     
     stringBinaryTree tree;
+    
     ifstream fin ("codes.txt");
     fin.open("codes.txt");
-    string line;
+
+    string liner;
     while(fin.good())
     {
-        getline(fin, line);
-        tree.insertNode(line);
+        getline(fin, liner);
+        tree.insertNode(liner);
+        cout << liner << "\n";
     }
     fin.close();
     
