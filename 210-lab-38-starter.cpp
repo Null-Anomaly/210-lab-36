@@ -35,6 +35,29 @@ int main() {
         {
             string temp;
             cout << "Insert the string you want to add";
+            cin >> temp;
+            tree.insertNode(temp);
+        }
+        if(x == 2)
+        {
+            string temp;
+            cout << "Insert the value of the string that you want to delete";
+            cin >> temp;
+            tree.remove(temp);
+        }
+        if( x == 3)
+        {
+            string temp;
+            cout << "Insert the value of the string that you want to search for";
+            cin >> temp;
+            if(tree.searchNode(temp))
+            {
+                cout << "The string " << temp << " was found in the tree.\n";
+            }
+            else
+            {
+                cout << "The string " << temp << " was not found in the tree.\n";
+            }
         }
     }
 
